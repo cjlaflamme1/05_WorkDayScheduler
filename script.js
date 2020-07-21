@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // Pre-defined objects in an array in align with the time lay-out of the html
  let workDaySchedule = [{
      hour: 9,
      schedule: ""
@@ -36,6 +37,7 @@ $(document).ready(function () {
     schedule: ""
 }
 ];
+// This initializes storage if it doesn't exist, and populates the calendar if it does. 
  function initializeScheduleStorage() {
      if(!window.localStorage.getItem('workDaySchedule')) {
          window.localStorage.setItem('workDaySchedule', JSON.stringify(workDaySchedule));
@@ -50,7 +52,7 @@ $(document).ready(function () {
 
  }
 initializeScheduleStorage();
-
+// Identifies which button is clicked, then saves content to the appropriate object. 
 $('button.saveBtn').on('click', function(event) {
     event.preventDefault();
     const clickTarget = event.target;
