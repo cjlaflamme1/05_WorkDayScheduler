@@ -56,13 +56,11 @@ $(document).ready(function () {
      $('div.textarea').each(function(event) {
          const textAreaHour = parseInt($(this).attr('value'));
          const currentHour = moment().format('H');
-         if(moment(currentHour, "H").isAfter(textAreaHour)) {
+         if(currentHour > textAreaHour) {
              $(this).addClass("past");
-         }
-         if(moment(currentHour, "H").isBefore(textAreaHour)) {
+         } else if (currentHour < textAreaHour) {
              $(this).addClass("future");
-         }
-         if(moment(currentHour, "H").isSame(textAreaHour)) {
+         } else if (currentHour === textAreaHour) {
              $(this).addClass("present");
          }
      
