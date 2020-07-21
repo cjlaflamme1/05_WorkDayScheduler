@@ -52,6 +52,7 @@ $(document).ready(function () {
              $(targetTextArea).val(index.schedule);
          })
      }
+    //  Adjusts current date and time; and modifies CSS based on Time. 
      $('#currentDay').text(m);
      $('div.textarea').each(function(event) {
          const textAreaHour = parseInt($(this).attr('value'));
