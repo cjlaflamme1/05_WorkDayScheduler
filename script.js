@@ -1,7 +1,6 @@
 $(document).ready(function () {
     const m = moment().format('LLLL');
     const h = moment().format('H');
-    console.log(h);
     // Pre-defined objects in an array in align with the time lay-out of the html
  let workDaySchedule = [{
      hour: 9,
@@ -74,18 +73,13 @@ $('button.saveBtn').on('click', function(event) {
     const clickTarget = event.target;
     const nameValue = $(clickTarget).attr('name');
     const textAreaTarget = "#textArea" + nameValue;
-    console.log(textAreaTarget);
     workDaySchedule = JSON.parse(window.localStorage.getItem('workDaySchedule'));
     workDaySchedule.forEach(function(index) {
-        console.log(index);
        if (index.hour === parseInt(nameValue)) {
-            console.log('success');
             index.schedule = $(textAreaTarget).val();
-            console.log(index.schedule);
         }
     })
     localStorage.setItem('workDaySchedule', JSON.stringify(workDaySchedule));
 })
 
-console.log(JSON.parse(window.localStorage.getItem('workDaySchedule')));
 })
