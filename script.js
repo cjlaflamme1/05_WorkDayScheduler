@@ -56,7 +56,7 @@ $(document).ready(function () {
      $('#currentDay').text(m);
      $('div.textarea').each(function(event) {
          const textAreaHour = parseInt($(this).attr('value'));
-         const currentHour = moment().format('H');
+         const currentHour = parseInt(moment().format('H'));
          if(currentHour > textAreaHour) {
              $(this).addClass("past");
          } else if (currentHour < textAreaHour) {
@@ -64,7 +64,6 @@ $(document).ready(function () {
          } else if (currentHour === textAreaHour) {
              $(this).addClass("present");
          }
-     
      })
     //  modify format to represent the current, present, or past hour. 
  }
