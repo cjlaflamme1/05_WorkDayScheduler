@@ -12,4 +12,9 @@ In this homework, we were tasked with creating a daily planner that scheduled a 
 
 1. My first big learning was trying to use Bootstrap and flexbox to organized the content of the webpage as displayed in the example.  It was surprisingly difficult to get content justified and centered, but I learned a lot about flexbox in the process. 
 
-2. 
+2. Another encounter was with trying to compare time with the specific schedule time blocks.  First I had to find how to reduce the time variable to just the hour, then compare that with the value of the block.  A bug almost slipped through (again) where I didn't realize it was trying to compare an integer and a string, so I had to parseInt each piece to prevent issues.  
+
+---
+### Screen Shots
+![IntroBanner](title.jpg)
+![Time blocks](timeblocks.jpg)
