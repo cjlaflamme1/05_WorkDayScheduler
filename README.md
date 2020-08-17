@@ -24,6 +24,7 @@ In this homework, we were tasked with creating a daily planner that scheduled a 
     * JQuery
     * Bootstrap
     * FontAwesome
+    * Moment.JS
 
 
 ## Finished Project
@@ -78,3 +79,4 @@ For more information, please refer to <http://unlicense.org/>
 * [Google](https://www.google.com/)
 * [Bootstrap](https://bootstrap.com/)
 * [jQuery](https://jquery.com/)
+* [Moment.js](https://momentjs.com/)
